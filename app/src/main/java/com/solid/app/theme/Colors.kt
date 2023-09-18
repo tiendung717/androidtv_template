@@ -5,107 +5,259 @@ import com.solid.theme.colors.ColorCollection
 import com.solid.theme.colors.ColorSet
 
 val lightColors = ColorCollection(
-    global = ColorSet(
-        color1 = Color(0xFFFFF3E8),
-        color2 = Color(0xFFFFEEDE),
-        color3 = Color(0xFFFD8717),
-        color4 = Color(0xFFE4750A),
-        color5 = Color(0xFFB45902)
+    project = ColorSet(
+        Stronger = Color(0xFFB45902),
+        Strong = Color(0xFFE4750A),
+        Normal = Color(0xFFFD7F17),
+        Weak = Color(0xFFFFEEDE),
+        Weaker = Color(0xFFFFF3E8)
     ),
-    typography = ColorSet(
-        color1 = Color(0xFF1A1D26),
-        color2 = Color(0xFF2A2F3D),
-        color3 = Color(0xFF4D5364),
-        color4 = Color(0xFF6E7489),
-        color5 = Color(0xFFB6B9C4),
-        color6 = Color(0xFFFFFFFF)
+    projectInvert = ColorSet(
+        Stronger = Color(0xFFFFF3E8),
+        Strong = Color(0xFFFFEEDE),
+        Normal = Color(0xFFFD7F17),
+        Weak = Color(0xFFE4750A),
+        Weaker = Color(0xFFB45902)
+    ),
+    text = ColorSet(
+        Stronger = Color(0xFF1A1D26),
+        Strong = Color(0xFF2A2F3D),
+        Normal = Color(0xFF4D5364),
+        Weak = Color(0xFF6E7489),
+        Weaker = Color(0xFFC6C9D2),
+    ),
+    textInvert = ColorSet(
+        Stronger =Color(0xFFFFFFFF),
+        Strong =Color(0xFFE2E4E9),
+        Normal =Color(0xFFC6C9D2),
+        Weak =Color(0xFF9195A1),
+        Weaker =Color(0xFF62646A),
     ),
     background = ColorSet(
-        color1 = Color(0xFFFFFFFF),
-        color2 = Color(0xFFFCFCFC),
-        color3 = Color(0xFFF7F7F7)
+        Stronger = Color(0xFFE4E9F1),
+        Strong = Color(0xFFEBEFF5),
+        Normal = Color(0xFFF7F7F7),
+        Weak = Color(0xFFFCFCFC),
+        Weaker = Color(0xFFFFFFFF),
+    ),
+    backgroundInvert = ColorSet(
+        Stronger = Color(0xFF333647),
+        Strong = Color(0xFF2F3241),
+        Normal = Color(0xFF2B2D3B),
+        Weak = Color(0xFF272935),
+        Weaker = Color(0xFF26262C),
     ),
     divider = ColorSet(
-        color1 = Color(0xFFF4F4F4),
-        color2 = Color(0xFFEBEBEB)
+        Stronger = Color(0xFFCCCFD7),
+        Strong = Color(0xFFEBEBEB),
+        Normal = Color(0xFFF4F4F4),
+        Weak = Color(0xFFEFEFF1),
+        Weaker = Color(0xFFFAFAFA),
+    ),
+    dividerInvert = ColorSet(
+        Stronger = Color(0xFF5A6072),
+        Strong = Color(0xFF535865),
+        Normal = Color(0xFF4B4F58),
+        Weak = Color(0xFF43454C),
+        Weaker = Color(0xFF3B3C40),
+    ),
+    neutral = ColorSet(
+        Stronger = Color(0xFFFFFFFF),
+        Strong = Color(0xFF26262C),
+        Normal = Color(0xFF333647),
+        Weak = Color(0xFFFFFFFF),
+        Weaker = Color(0xFF26262C),
+    ),
+    neutralInvert = ColorSet(
+        Stronger = Color(0xFFFFFFFF),
+        Strong = Color(0xEBFFFFFF),
+        Normal = Color(0xD9FFFFFF),
+        Weak = Color(0x33FFFFFF),
+        Weaker = Color(0x1AFFFFFF),
     ),
     positive = ColorSet(
-        color1 = Color(0xFFD9EEEA),
-        color2 = Color(0xFF008E73),
-        color3 = Color(0xFF00725C),
-        color4 = Color(0xFF28C195)
+        Stronger = Color(0xFF179470),
+        Strong = Color(0xFF00B072),
+        Normal = Color(0xFF28C195),
+        Weak = Color(0xFFC4F5E4),
+        Weaker = Color(0xFFD9EEEA),
+    ),
+    positiveInvert = ColorSet(
+        Stronger = Color(0xFFD9EEEA),
+        Strong = Color(0xFFC4F5E4),
+        Normal = Color(0xFF28C195),
+        Weak = Color(0xFF00B072),
+        Weaker = Color(0xFF179470),
     ),
     negative = ColorSet(
-        color1 = Color(0xFFFCE9EE),
-        color2 = Color(0xFFF95C60),
-        color3 = Color(0xFFD11C4C)
+        Stronger = Color(0xFFD11C4C),
+        Strong = Color(0xFFDB2E2E),
+        Normal = Color(0xFFF95C60),
+        Weak = Color(0xFFFBDCDC),
+        Weaker = Color(0xFFFEEEEE),
+    ),
+    negativeInvert = ColorSet(
+        Stronger = Color(0xFFFEEEEE),
+        Strong = Color(0xFFFBDCDC),
+        Normal = Color(0xFFF95C60),
+        Weak = Color(0xFFDB2E2E),
+        Weaker = Color(0xFFD11C4C),
     ),
     warning = ColorSet(
-        color1 = Color(0xFFFFF6E6),
-        color2 = Color(0xFFFFDCA1),
-        color3 = Color(0xFFFF9C00)
+        Stronger = Color(0xFFFF9C00),
+        Strong = Color(0xFFE78F02),
+        Normal = Color(0xFFFFDCA1),
+        Weak = Color(0xFFFFEFD4),
+        Weaker = Color(0xFFFFF6E6)
     ),
-    links = ColorSet(
-        color1 = Color(0xFF0071E3)
+    warningInvert = ColorSet(
+        Stronger = Color(0xFFFFF6E6),
+        Strong = Color(0xFFFFEFD4),
+        Normal = Color(0xFFFFDCA1),
+        Weak = Color(0xFFE78F02),
+        Weaker = Color(0xFFFF9C00)
     ),
-    tabs = ColorSet(
-        color1 = Color(0xFFFFFFFF),
-        color2 = Color(0xFFF4F4F4)
+    textLink = ColorSet(
+        Stronger = Color(0xFF005EBA),
+        Strong = Color(0xFF0067CB),
+        Normal = Color(0xFF0078ED),
+        Weak = Color(0xFFD9EBFD),
+        Weaker = Color(0xFFEEF5FB),
     ),
-    tags = ColorSet(
-        color1 = Color(0xFFF7F7F7)
-    )
+    textLinkInvert = ColorSet(
+        Stronger = Color(0xFFEEF5FB),
+        Strong = Color(0xFFD9EBFD),
+        Normal = Color(0xFF0078ED),
+        Weak = Color(0xFF0067CB),
+        Weaker = Color(0xFF005EBA),
+    ),
 )
 
 val darkColors = ColorCollection(
-    global = ColorSet(
-        color1 = Color(0xFFFFF3E8),
-        color2 = Color(0xFFFEEDED),
-        color3 = Color(0xFFFD8717),
-        color4 = Color(0xFFE4750A),
-        color5 = Color(0xFFB45902)
+    project = ColorSet(
+        Stronger = Color(0xFFB45902),
+        Strong = Color(0xFFE4750A),
+        Normal = Color(0xFFFD7F17),
+        Weak = Color(0xFFFFEEDE),
+        Weaker = Color(0xFFFFF3E8),
     ),
-    typography = ColorSet(
-        color1 = Color(0xFFFFFFFF),
-        color2 = Color(0xFFEDEDEE),
-        color3 = Color(0xFFDADADD),
-        color4 = Color(0xFFC8C8CC),
-        color5 = Color(0xFFB5B5BB),
-        color6 = Color(0xFFA3A3AA)
+    projectInvert = ColorSet(
+        Stronger = Color(0xFFFFF3E8),
+        Strong = Color(0xFFFFEEDE),
+        Normal = Color(0xFFFD7F17),
+        Weak = Color(0xFFE4750A),
+        Weaker = Color(0xFFB45902),
+    ),
+    text = ColorSet(
+        Stronger = Color(0xFFFFFFFF),
+        Strong = Color(0xFFE2E4E9),
+        Normal = Color(0xFFC6C9D2),
+        Weak = Color(0xFFC8C8CC),
+        Weaker = Color(0xFF62646A),
+    ),
+    textInvert = ColorSet(
+        Stronger = Color(0xFFFFFFFF),
+        Strong = Color(0xFFE2E4E9),
+        Normal = Color(0xFFC6C9D2),
+        Weak = Color(0xFFC8C8CC),
+        Weaker = Color(0xFF62646A),
     ),
     background = ColorSet(
-        color1 = Color(0xFF474755),
-        color2 = Color(0xFF393948),
-        color3 = Color(0xFF2B2A3A)
+        Stronger = Color(0xFF333647),
+        Strong = Color(0xFF2F3241),
+        Normal = Color(0xFF2B2A3A),
+        Weak = Color(0xFF393948),
+        Weaker = Color(0xFF474755),
+    ),
+    backgroundInvert = ColorSet(
+        Stronger = Color(0xFF333647),
+        Strong = Color(0xFF2F3241),
+        Normal = Color(0xFF2B2D3B),
+        Weak = Color(0xFF272935),
+        Weaker = Color(0xFF26262C),
     ),
     divider = ColorSet(
-        color1 = Color(0xFF4F4E5C),
-        color2 = Color(0xFF535261)
+        Stronger = Color(0xFF5A6072),
+        Strong = Color(0xFF535865),
+        Normal = Color(0xFF4B4F58),
+        Weak = Color(0xFF5A5A69),
+        Weaker = Color(0xFF3B3C40),
+    ),
+    dividerInvert = ColorSet(
+        Stronger = Color(0xFFCCCFD7),
+        Strong = Color(0xFFEBEBEB),
+        Normal = Color(0xFFF4F4F4),
+        Weak = Color(0xFFEFEFF1),
+        Weaker = Color(0xFFFAFAFA),
+    ),
+    neutral = ColorSet(
+        Stronger = Color(0xFF26262C),
+        Strong = Color(0xEBFFFFFF),
+        Normal = Color(0xD9FFFFFF),
+        Weak = Color(0x33FFFFFF),
+        Weaker = Color(0x1AFFFFFF),
+    ),
+    neutralInvert = ColorSet(
+        Stronger = Color(0xFFFFFFFF),
+        Strong = Color(0xEBFFFFFF),
+        Normal = Color(0xD9FFFFFF),
+        Weak = Color(0x33FFFFFF),
+        Weaker = Color(0x1AFFFFFF),
     ),
     positive = ColorSet(
-        color1 = Color(0xFFD9EEEA),
-        color2 = Color(0xFF008E73),
-        color3 = Color(0xFF00725C),
-        color4 = Color(0xFF28C195)
+        Stronger = Color(0xFFFFFFFF),
+        Strong = Color(0xFFFFFFFF),
+        Normal = Color(0xFFFFFFFF),
+        Weak = Color(0xFFFFFFFF),
+        Weaker = Color(0xFFFFFFFF),
+    ),
+    positiveInvert = ColorSet(
+        Stronger = Color(0xFFD9EEEA),
+        Strong = Color(0xFFC4F5E4),
+        Normal = Color(0xFF28C195),
+        Weak = Color(0xFF00B072),
+        Weaker = Color(0xFF179470),
     ),
     negative = ColorSet(
-        color1 = Color(0xFFFCE9EE),
-        color2 = Color(0xFFF95C60),
-        color3 = Color(0xFFD11C4C)
+        Stronger = Color(0xFFCB2525),
+        Strong = Color(0xFFDB2E2E),
+        Normal = Color(0xFFEE3E3E),
+        Weak = Color(0xFFFBDCDC),
+        Weaker = Color(0xFFFEEEEE),
+    ),
+    negativeInvert = ColorSet(
+        Stronger = Color(0xFFFFFFFF),
+        Strong = Color(0xFFFFFFFF),
+        Normal = Color(0xFFFFFFFF),
+        Weak = Color(0xFFFFFFFF),
+        Weaker = Color(0xFFFFFFFF),
     ),
     warning = ColorSet(
-        color1 = Color(0xFFFFF6E6),
-        color2 = Color(0xFFFFDCA1),
-        color3 = Color(0xFFFF9C00)
+        Stronger = Color(0xFFD58402),
+        Strong = Color(0xFFE78F02),
+        Normal = Color(0xFFFF9C00),
+        Weak = Color(0xFFFFEFD4),
+        Weaker = Color(0xFFFFF6E6)
     ),
-    links = ColorSet(
-        color1 = Color(0xFF0071E3)
+    warningInvert = ColorSet(
+        Stronger = Color(0xFFFFFFFF),
+        Strong = Color(0xFFFFFFFF),
+        Normal = Color(0xFFFFFFFF),
+        Weak = Color(0xFFFFFFFF),
+        Weaker = Color(0xFFFFFFFF),
     ),
-    tabs = ColorSet(
-        color1 = Color(0xFF5A5A69),
-        color2 = Color(0xFF4F4E5C)
+    textLink = ColorSet(
+        Stronger = Color(0xFF005EBA),
+        Strong = Color(0xFF0067CB),
+        Normal = Color(0xFF0078ED),
+        Weak = Color(0xFFD9EBFD),
+        Weaker = Color(0xFFEEF5FB),
     ),
-    tags = ColorSet(
-        color1 = Color(0xFF5A5A69)
-    )
+    textLinkInvert = ColorSet(
+        Stronger = Color(0xFF005EBA),
+        Strong = Color(0xFF0067CB),
+        Normal = Color(0xFF0078ED),
+        Weak = Color(0xFFFFFFFF),
+        Weaker = Color(0xFFE6F2FE),
+    ),
 )

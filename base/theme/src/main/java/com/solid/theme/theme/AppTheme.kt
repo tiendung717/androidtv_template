@@ -1,18 +1,20 @@
 package com.solid.theme.theme
 
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
+import androidx.tv.material3.ExperimentalTvMaterial3Api
+import androidx.tv.material3.MaterialTheme
 import com.solid.theme.colors.LocalColors
-import com.solid.theme.colors.MaterialDarkColors
-import com.solid.theme.colors.MaterialLightColors
+import com.solid.theme.colors.materialColors
 import com.solid.theme.di.fontFamily
 import com.solid.theme.di.themeColor
 
+@OptIn(ExperimentalTvMaterial3Api::class)
 @Composable
 fun AppTheme(
     useDarkTheme: Boolean,
@@ -21,15 +23,16 @@ fun AppTheme(
     val context = LocalContext.current
     val fontFamily = remember { context.fontFamily() }
     val themeColors = remember { context.themeColor() }
-
     val colorCollection by remember(useDarkTheme) {
         mutableStateOf(if (useDarkTheme) themeColors.dark else themeColors.light)
     }
 
     CompositionLocalProvider(LocalColors provides colorCollection) {
         MaterialTheme(
-            colorScheme = if (useDarkTheme) MaterialDarkColors else MaterialLightColors,
-            content = content,
+            colorScheme = if (useDarkTheme) materialColors(themeColors.dark) else materialColors(themeColors.light),
+            content = {
+                content()
+            },
             typography = MaterialTheme.typography.copy(
                 displayLarge = MaterialTheme.typography.displayLarge.copy(
                     fontFamily = fontFamily

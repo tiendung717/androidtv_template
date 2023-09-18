@@ -1,5 +1,6 @@
 package com.solid.navigation.destination
 
+import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavDeepLink
@@ -15,7 +16,7 @@ data class Destination(
 
 fun NavGraphBuilder.destination(
     destination: Destination,
-    content: @Composable (NavBackStackEntry) -> Unit
+    content: @Composable AnimatedContentScope.(NavBackStackEntry) -> Unit
 ) {
     composable(
         route = destination.route,

@@ -20,6 +20,7 @@ val minor = props["minorVersion"].toString().toInt()
 val patch = props["patchVersion"].toString().toInt()
 
 android {
+    namespace = "com.solid.app"
     compileSdk = Build.compileSdk
 
     defaultConfig {
@@ -29,7 +30,7 @@ android {
         versionCode = 10000 * major + 1000 * minor + 10 * patch
         versionName = "$major.$minor.$patch"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "DYNAMIC_LINK_DOMAIN", "\"tech.cleverone.honorguest\"")
+        buildConfigField("String", "DYNAMIC_LINK_DOMAIN", "\"app\"")
     }
 
     signingConfigs {
@@ -63,31 +64,18 @@ android {
         }
     }
 
-    flavorDimensions.add("app")
-
-    productFlavors {
-        create("prod") {
-            dimension = "app"
-            applicationIdSuffix = ".prod"
-        }
-
-        create("qa") {
-            dimension = "app"
-            applicationIdSuffix = ".qa"
-        }
-    }
-
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     composeOptions {
@@ -105,8 +93,6 @@ repositories {
 dependencies {
 
     // Module dependencies
-    implementation(project(":feature:ads"))
-    implementation(project(":feature:purchase"))
     implementation(project(":base:theme"))
     implementation(project(":base:common"))
     implementation(project(":base:ui"))
@@ -125,8 +111,6 @@ dependencies {
         deps.Firebase,
         deps.CameraX,
         deps.Test,
-        deps.Ads,
-        deps.Billing
     )
 }
 

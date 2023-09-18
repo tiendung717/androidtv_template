@@ -9,9 +9,9 @@ object Build {
     const val versionPatch = 0
     const val versionBuild = 1
 
-    const val compileSdk = 33
+    const val compileSdk = 34
     const val minSdk = 26
-    const val targetSdk = 31
+    const val targetSdk = 34
     const val versionCode = versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
     const val versionName = "$versionMajor.$versionMinor.$versionPatch.$versionBuild"
 
